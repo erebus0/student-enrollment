@@ -21,12 +21,18 @@ const ActionProvider = ({ createChatBotMessage, setState, ...props }) => {
     }));
   };
 
-  const handleAge = (age) => {
+  const handleSlot = () => {
+    // Add logic to display the slot picker widget
+    // You can use a similar approach as in handleHello
+  };
+
+  const handleAge = () => {
     const botMessage = createChatBotMessage('Thank you. In 5 seconds, bot will exit.');
 
     // Add a delay before redirecting to page 3
     setTimeout(() => {
       // Implement the redirection logic to Page 3 here
+      // You can use window.location.href or a routing library to navigate to Page 3
     }, 5000);
 
     setState((prevState) => ({
@@ -42,6 +48,7 @@ const ActionProvider = ({ createChatBotMessage, setState, ...props }) => {
           actions: {
             handleHello,
             handleName,
+            handleSlot,
             handleAge,
           },
         });
